@@ -1,13 +1,7 @@
 const fibonacci = function(fNum) {
-    if (fNum < 0) {
-        return "OOPS";
-    }
-    else if (fNum == 0) {
-        return 0;
-    }
-    else if (fNum < 3) {
-        return 1;
-    }
+    if (fNum < 0) return "OOPS";
+    else if (fNum == 0) return 0;
+    else if (fNum < 3) return 1;
     else {
         let num = 0;
         let previousNums = [1, 1];
