@@ -19,12 +19,17 @@ const power = function(num, pow) {
 	for (let i = 0; i < pow; i++) {
     result *= num;
   }
-  
+
   return result;
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+	if (num > 1) {
+    return num * factorial(num - 1);
+  }
+  else {
+    return 1;
+  }
 };
 
 // Do not edit below this line
