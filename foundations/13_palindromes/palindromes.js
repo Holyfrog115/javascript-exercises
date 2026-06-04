@@ -1,12 +1,27 @@
 const palindromes = function (string) {
-    stringLwr = string.toLowerCase().replaceAll(" ", "").replaceAll(",", "").replaceAll(".", "").replaceAll("!", "");
-    for (let i = 0; i < stringLwr.length / 2; i++) {
-        if (stringLwr.at(i) != stringLwr.at(-i - 1)) {
-            return false;
-        }
-    }
+    const alphanumerical = "qwertyuiopasdfghjklzxcvbnm1234567890";
 
-    return true;
+    const cleanedString = string
+                        .toLowerCase()
+                        .split('')
+                        .filter((character) => alphanumerical.includes(character))
+                        .join('');
+    
+    const reversedString = cleanedString
+                        .split('')
+                        .reverse()
+                        .join('');
+    
+    console.log(cleanedString);
+    console.log(reversedString);
+
+    if (cleanedString === reversedString) {
+        return true;
+    }
+    else {
+        return false;
+    }
+                        
 };
 
 // Do not edit below this line
