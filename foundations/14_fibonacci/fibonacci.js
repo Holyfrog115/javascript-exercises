@@ -1,5 +1,11 @@
 const fibonacci = function(fNum) {
-    if (fNum < 3) {
+    if (fNum < 0) {
+        return "OOPS";
+    }
+    else if (fNum == 0) {
+        return 0;
+    }
+    else if (fNum < 3) {
         return 1;
     }
     else {
